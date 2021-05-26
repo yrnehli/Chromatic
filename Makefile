@@ -1,10 +1,14 @@
-INSTALL_TARGET_PROCESSES = SpringBoard
+DEBUG = 0
+PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
+ARCHS = armv7 armv7s arm64 arm64e
 
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = Chromatic
-
-Chromatic_FILES = Tweak.xm
-Chromatic_CFLAGS = -fobjc-arc
+$(TWEAK_NAME)_FILES = Tweak.xm
+$(TWEAK_NAME)_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
+
+after-install::
+	install.exec "sbreload"

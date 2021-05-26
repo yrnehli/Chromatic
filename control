@@ -1,9 +1,9 @@
-Package: xyz.henry.chromatic
+Package: xyz.henryli17.chromatic
 Name: Chromatic
-Depends: mobilesubstrate
-Version: 0.0.1
+Depends: mobilesubstrate, firmware (>= 13), firmware (<< 14)
+Version: 0.0.2
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
+Description: Colourfy your iOS 13 music app.
 Maintainer: henry
 Author: henry
 Section: Tweaks
